@@ -1,0 +1,27 @@
+/* 
+
+  faca uma funcao que receba uma lista de numeros e retorne o menos deles
+
+*/
+
+function menorNum (arr) {
+
+    let menor = arr[0]
+
+    for(let i  = 1 ; i < arr.length ; i++){
+
+        if(arr[i] < menor ){
+            menor = arr[i]
+        }
+    }
+
+    return menor
+
+    //se o numero for menor que menor entao substitui senao mantem
+
+}
+
+
+const arr = [45,15,9,-10,60,2,13] // esperado retorno do menor numero
+
+console.log(menorNum(arr))
