@@ -1,0 +1,19 @@
+/* faca uma funcao que receba via parametros uma lista de numeros,
+retorne a soma dos numeros pares.
+
+*/
+
+
+function somaPares (arr){
+    
+    const pares = arr.reduce((acc,curr) =>
+    curr%2 === 0?acc+=curr:acc, 0) 
+
+    return pares
+
+}
+
+
+const arr = [2,5,9,11,45,66,12,25,24] // esperado 104 com a soma apenas dos pares
+
+console.log(somaPares(arr))
