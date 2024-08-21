@@ -1,0 +1,25 @@
+/*
+    Faca uma funcao que receba dois vetores xd e yd e retorne uma lista zs contendo a soma de ambos posicao por posicao.
+*/
+
+function somaPosicaoVetores (xs,ys){
+
+    let zs = []
+
+    for(let i = 0; i < xs.length; i++){
+
+        zs[i] = xs[i] + ys[i]
+    }
+
+    return zs
+
+}
+
+
+const xs = [1,2,4,6]
+
+const ys = [6,1,1,2]
+
+//const zs = [7,3,5,8]
+
+console.log(somaPosicaoVetores(xs,ys))
