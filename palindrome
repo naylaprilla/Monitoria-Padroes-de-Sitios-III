@@ -1,0 +1,37 @@
+/*
+    Usando o exercicio acima faca uma funcao que decida se uma palavra e palindromo ou nao.
+*/
+
+function ordemReversa(str) {
+
+    let reverseStr = ""
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reverseStr += str[i]
+    }
+
+    //console.log(reverseStr)
+
+    return reverseStr
+}
+
+function palindrome(str) {
+
+    let reverseStr = ordemReversa(str)
+
+    if (str === reverseStr) {
+
+        console.log(" A String : " + str + " \nna ordem reversa: " + reverseStr + "\n Confirma ser um Palindromo")
+
+    } else {
+
+        console.log(" A String : \n" + str + " \nna ordem reversa: " + reverseStr + "\n Nao eh um Palindromo")
+
+    }
+
+}
+
+
+const str = "arara"
+
+console.log(palindrome(str))
