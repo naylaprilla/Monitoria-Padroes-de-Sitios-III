@@ -1,0 +1,37 @@
+/*
+  Complete the 'birthdayCakeCandles' function below.
+
+  The function is expected to return an INTEGER.
+  The function accepts INTEGER_ARRAY candles as parameter.
+ */
+
+function birthdayCakeCandles(candles) {
+
+    let numOfHighCandles = 1
+
+    let sortCandles = []
+
+    sortCandles = candles.sort((a, b) => b - a)
+
+    //console.log(sortCandles)
+
+    for (let index = 0; index < sortCandles.length; index++) {
+
+        if (sortCandles[index] > sortCandles[index + 1]) {
+            break
+        } else if (sortCandles[index] === sortCandles[index + 1]) {
+            numOfHighCandles++
+        }
+    }
+
+    return numOfHighCandles
+
+}
+
+
+const candles = [1, 2, 1, 4, 4, 5, 3]
+
+let numOFCandles = 0
+numOFCandles = birthdayCakeCandles(candles)
+
+console.log(numOFCandles)
