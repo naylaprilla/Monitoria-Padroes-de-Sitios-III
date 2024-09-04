@@ -1,0 +1,24 @@
+function miniMaxSum(arr) {
+    // min sum and max
+    //a funcao precisa imprimir a soma dos menores numeros -  encontra o menor e exclui e soma o que sobra
+    // e o max todos os numeros menos o primeiro
+
+    let numMin = Math.min(...arr)
+    let numMax = Math.max(...arr)
+    //console.log(numMin,numMax)
+
+    let sum = 0;
+
+    for(let i = 0; i < arr.length; i++ ) {
+
+        sum += arr[i]
+
+    }
+
+    let sumMin = sum - numMax
+    let sumMax = sum - numMin
+    
+
+    console.log(sumMin, sumMax)
+
+}
