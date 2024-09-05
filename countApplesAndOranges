@@ -1,0 +1,26 @@
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+
+    let applesCount = 0
+    let orangeCount = 0
+    
+
+    // calculo das distancia das apples a + (aplles[i])
+
+    for(let i = 0 ; i < apples.length; i++){
+        if(a + apples[i] >= s && a + apples[i] <= t){
+            applesCount+=1
+        }
+    }
+
+    // calculo das distancia das oranges b + (oranges[i])
+
+    for(let i = 0 ; i < oranges.length; i++){
+        if(b + oranges[i] >= s && b + oranges[i] <= t){
+            orangeCount+=1            
+        }
+    }
+
+    return console.log(applesCount+"\n"+orangeCount)
+    
+
+}
