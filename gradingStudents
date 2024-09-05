@@ -1,0 +1,21 @@
+function gradingStudents(grades) {
+    
+    let rounded = []
+
+    grades = grades.map((nota, i) => {
+
+        let diferenca = 5 - (nota % 5)
+
+
+        if (diferenca < 3 & nota >= 38) {
+
+            rounded[i] = nota + diferenca
+
+        } else {
+            rounded[i] = nota
+        }
+
+    })
+
+    return rounded
+}
