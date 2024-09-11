@@ -1,0 +1,46 @@
+//No HTML:
+<html></html>
+    <head>
+        <script src="tarefa.js"></script>
+        <title>Tarefa Aula</title>
+    </head>
+    <body>
+        <button onclick="criarDivs()">Criar Divs</button>
+    </body>
+</html>
+
+
+
+//No JS: 
+function obterObjeto() {
+    return { numeros: [1, 3, 7, 9, -1, 0, 4], qt: 7 };
+  }
+
+function criarDivs() {
+    const objNumero = obterObjeto();
+    let divContainer = document.createElement('div');
+
+// Cria uma div para cada número usando um loop for
+    for(let i = 0; i < objNumero.numeros.length; i++) {
+        let divNumero = document.createElement('div');
+        divNumero.innerHTML = objNumero.numeros[i];
+        divContainer.appendChild(divNumero);        
+    }
+
+// Cria uma div para a quantidade
+    let divQt = document.createElement('div'); 
+    divQt.innerHTML = `Quantidade: ${objNumero.qt}`
+    divContainer.appendChild(divQt)
+
+//Cria uma div para a soma
+    let divSoma = document.createElement('div');
+    let soma = 0;
+  for (let i = 0; i < objNumero.numeros.length; i++) {
+    soma += objNumero.numeros[i];
+  }
+    divSoma.innerHTML = `Soma: ${soma}`
+    divContainer.appendChild(divSoma)
+
+//faz tudo aparecer no corpo da pagina
+    document.body.appendChild(divContainer);
+}
