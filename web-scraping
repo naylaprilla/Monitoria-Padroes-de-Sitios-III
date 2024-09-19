@@ -1,0 +1,26 @@
+function alterarPagina(){
+    const corFundo = document.querySelector("#contents")
+    corFundo.style.backgroundColor = '#FFF0F5';
+
+    const titulo = document.querySelectorAll('#video-title.style-scope.ytd-rich-grid-media');
+    for(let i = 0; i < titulo.length; i++){
+        titulo[i].style.color = '#4B0082';
+        titulo[i].style.fontSize = '30px';         
+        titulo[i].innerText = "Mudei esse titulo";       
+    }
+
+    const nomeCanal = document.querySelectorAll("#text > a")
+    for(let i = 0; i < nomeCanal.length; i++){
+        nomeCanal[i].style.fontSize = '24px';
+        nomeCanal[i].style.fontWeight = 'bold';
+        nomeCanal[i].style.color = '#fff';
+        nomeCanal[i].style.backgroundColor = '#A020F0';
+        nomeCanal[i].style.padding = '5px';                
+    }
+
+    const views = document.querySelectorAll("#metadata-line > span:nth-child(3)")
+    for(let i = 0; i < views.length; i++){
+        views[i].innerText = "999.999.999 views";
+    }
+}
+alterarPagina();
